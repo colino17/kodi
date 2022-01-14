@@ -1155,6 +1155,12 @@ void CXBMCApp::onNewIntent(CJNIIntent intent)
   std::string action = intent.getAction();
   CLog::Log(LOGDEBUG, "CXBMCApp::onNewIntent - Got intent. Action: %s", action.c_str());
   std::string targetFile = GetFilenameFromIntent(intent);
+  
+  if(action == "android.intent.action.MAIN" && intent.hasCategory("android.intent.category.HOME"))
+  {
+    CApplicationMessenger::GetInstance().PostMsg(TMSG_GUI_ACTIVATE_WINDOW, WINDOW_HOME, 0, nullptr); // Sets Home window as active
+  } else
+  
   if (!targetFile.empty() &&  (action == "android.intent.action.VIEW" || action == "android.intent.action.GET_CONTENT"))
   {
     CLog::Log(LOGDEBUG, "-- targetFile: %s", targetFile.c_str());
