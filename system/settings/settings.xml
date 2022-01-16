@@ -467,7 +467,7 @@
       <group id="2" label="287">
         <setting id="locale.subtitlelanguage" type="string" label="286" help="36120">
           <level>0</level>
-          <default>original</default>
+          <default>none</default>
           <constraints>
             <options>subtitlestreamlanguages</options>
           </constraints>
@@ -613,7 +613,7 @@
       <group id="3" label="14235">
         <setting id="subtitles.languages" type="list[string]" label="24111" help="24112">
           <level>1</level>
-          <default>English</default>
+          <default>none</default>
           <constraints>
             <options>subtitledownloadlanguages</options>
             <delimiter>,</delimiter>
@@ -805,7 +805,7 @@
       <group id="1" label="593">
         <setting id="filelists.showparentdiritems" type="boolean" label="13306" help="36122">
           <level>1</level>
-          <default>true</default>
+          <default>false</default>
           <control type="toggle" />
         </setting>
         <setting id="filelists.ignorethewhensorting" type="boolean" label="13399" help="36124">
@@ -822,7 +822,7 @@
         </setting>
         <setting id="filelists.showaddsourcebuttons" type="boolean" label="21382" help="36126">
           <level>1</level>
-          <default>true</default>
+          <default>false</default>
           <dependencies>
             <dependency type="enable">
               <or>
@@ -900,7 +900,7 @@
       <group id="3" label="14022">
         <setting id="videolibrary.showallitems" type="boolean" label="38011" help="38012">
           <level>2</level>
-          <default>true</default>
+          <default>false</default>
           <control type="toggle" />
         </setting>
         <setting id="videolibrary.showunwatchedplots" type="list[integer]" label="20369" help="36141">
@@ -921,7 +921,7 @@
         </setting>
         <setting id="videolibrary.groupmoviesets" type="boolean" label="20458" help="36145">
           <level>1</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
         </setting>
         <setting id="videolibrary.groupsingleitemsets" type="boolean" label="20470" help="36157">
@@ -953,7 +953,7 @@
         </setting>
         <setting id="videolibrary.tvshowsselectfirstunwatcheditem" type="integer" label="21416" help="21466">
           <level>2</level>
-          <default>0</default> <!-- Never -->
+          <default>2</default> <!-- Always -->
           <constraints>
             <options>
               <option label="20420">0</option> <!-- Never -->
@@ -3181,7 +3181,7 @@
         </setting>
         <setting id="general.addonnotifications" type="boolean" label="36609" help="36612">
           <level>0</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
           <dependencies>
             <dependency type="enable" setting="general.addonupdates">0</dependency>
@@ -3197,7 +3197,7 @@
         </setting>
         <setting id="addons.unknownsources" type="boolean" label="36615" help="36616">
           <level>0</level>
-          <default>false</default>
+          <default>true</default>
           <control type="toggle" />
         </setting>
         <setting id="addons.updatemode" type="integer" parent="addons.unknownsources" label="36422" help="36423">
@@ -3441,7 +3441,7 @@
       <group id="1" label="24997">
         <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
           <level>0</level>
-          <default>skin.estuary</default>
+          <default>skin.artic.breeze</default>
           <constraints>
             <addontype>xbmc.gui.skin</addontype>
           </constraints>
